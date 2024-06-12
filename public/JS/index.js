@@ -175,13 +175,6 @@ function createCard(data) {
                         <div class="align-self-center ms-1 me-auto">
                             ${data.message}
                         </div>
-                        <div class="align-self-center d-flex justify-content-around align-items-center flex-row">
-                            <div class="d-flex justify-content-between align-items-center flex-row align-self-stretch">
-                                <input type="checkbox" class="btn-check" name="options-outlined" id="danger-outlined">
-                                <label class="btn btn-outline-danger" for="danger-outlined"><i
-                                        class="bi bi-trash-fill"></i></label>
-                            </div>
-                        </div>
                     </li>
     `;
     return htmlCode;
