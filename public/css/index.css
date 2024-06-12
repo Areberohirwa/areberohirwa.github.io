@@ -182,6 +182,61 @@ ul {
     display: none;
 }
 
+
+.wave-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 70%;
+    overflow: hidden;
+    border-radius: 45%;
+    background-image: url('../img/file.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wave {
+    position: absolute;
+    top: 70%;
+    left: -50%;
+    width: 48rem;
+    height: 48rem;
+    background-color: #2C4F86;
+    border-radius: 35%;
+    animation-name: waves;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    &.one {
+        animation-duration: 7000ms;
+        opacity: 0.2;
+    }
+
+    &.two {
+        background-color: #70C7CB;
+        animation-duration: 9000ms;
+        opacity: 0.2;
+    }
+
+    &.three {
+        animation-duration: 12000ms;
+        opacity: 0.7;
+    }
+}
+
+
+@keyframes waves {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 #app {
     text-align: center;
     font-size: 40px;
@@ -285,6 +340,10 @@ svg text {
 
     .list-group {
         max-height: 20vh;
+    }
+
+    .wave-wrapper {
+        height: 30vh;
     }
 
 }
