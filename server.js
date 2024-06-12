@@ -42,7 +42,6 @@ async function insertMessage(name) {
         const database = client.db("review");
         const collection = database.collection("reviewcollect");
         await collection.insertOne({ message: name });
-        console.log("succesfully inserted cheese");
     } finally {
         await client.close();
     }

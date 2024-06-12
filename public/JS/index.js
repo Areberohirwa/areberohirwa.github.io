@@ -147,7 +147,7 @@ button.addEventListener('click', function (e) {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name: message})
+            body: JSON.stringify({ name: message })
         });
 
         const content = await rawResponse.json();
@@ -159,24 +159,30 @@ button.addEventListener('click', function (e) {
     })();
 });
 
-// fetch('/objects').then((res) => res.json()).then(
-//     (objects) => {
-//         for (let i = 0; i < objects.length; i++) {
-//             const htmlCode = createCard(objects[i]);
-//             container.innerHTML += htmlCode;
-//         }
-//     }
-// );
+fetch('/objects').then((res) => res.json()).then(
+    (objects) => {
+        for (let i = 0; i < objects.length; i++) {
+            const htmlCode = createCard(objects[i]);
+            reviewList.innerHTML += htmlCode;
+        }
+    }
+);
 
-// function createCard(data) {
-//     const htmlCode = `
-//     <div class="card text-center mb-3" style="width: 18rem;">
-//     <div class="card-body">
-//     <h5 class="card-title">${data.icecream}</h5>
-//     <p class="card-text">${data.description}</p>
-//     <a href="#" class="btn btn-primary">${data.price}</a>
-//     </div>
-//         </div>
-//     `;
-//     return htmlCode;
-// }
+function createCard(data) {
+    const htmlCode = `
+                     <li
+                        class="list-group-item bg-black text-white py-1 fw-bold text-lowercase d-flex justify-content-between align-items-center flex-row">
+                        <div class="align-self-center ms-1 me-auto">
+                            ${data.message}
+                        </div>
+                        <div class="align-self-center d-flex justify-content-around align-items-center flex-row">
+                            <div class="d-flex justify-content-between align-items-center flex-row align-self-stretch">
+                                <input type="checkbox" class="btn-check" name="options-outlined" id="danger-outlined">
+                                <label class="btn btn-outline-danger" for="danger-outlined"><i
+                                        class="bi bi-trash-fill"></i></label>
+                            </div>
+                        </div>
+                    </li>
+    `;
+    return htmlCode;
+}
