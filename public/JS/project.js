@@ -22,7 +22,7 @@
 //                 <div class="collapse navbar-collapse p-1" id="navbarSupportedContents">
 //                 <ul class="navbar-nav mx-auto linking2 border-bottom border-3 border-danger p-2 rounded fixed-top mt-1 z-3 d-flex justify-content-around align-items-center flex-row flex-wrap">
 //                     <li class="nav-item me-1 mb-2 mb-lg-0">
-//                         <a class="text-decoration-none btn btn-outline-warning fw-bold" aria-current="page" href="../index.html">Home</a>
+//                         <a class="text-decoration-none btn btn-outline-warning fw-bold" aria-current="page" href="index.html">Home</a>
 //                     </li>
 //                     <li class="nav-item me-1 mb-2 mb-lg-0">
 //                         <a class="text-decoration-none btn btn-outline-warning fw-bold" aria-current="page" href="#">About Me</a>
@@ -30,13 +30,12 @@
 //                     <li class="nav-item me-1 mb-2 mb-lg-0">
 //                         <a class="text-decoration-none btn btn-outline-warning fw-bold" aria-current="page" href="skill.html">Skills</a>
 //                     </li>
-//                     <li class="nav-item">
-//                         <a class="text-decoration-none btn btn-outline-danger fw-bold" href="project.html">
-//                             Projects
-//                         </a>
-//                     </li>
+                    // <li class="nav-item me-1 mb-2 mb-lg-0">
+                    //         <a class="text-decoration-none btn btn-outline-danger fw-bold" aria-current="page" href="project.html">
+                    //             Projects</a>
+                    // </li>
 //                 </ul>
-                    
+
 //                 </div>
 //             </div>
 //         </nav>
