@@ -6,6 +6,10 @@ body {
     background-color: #030712;
 }
 
+.orange-color{
+    color: rgb(255, 94, 0);
+}
+
 .wrapper {
     margin-top: 2rem;
     width: 100%;
@@ -36,8 +40,8 @@ body {
 .itemLeft,
 .itemRight {
     width: 200px;
-    height: 80px;
-    background-color: #e11d48;
+    height: 100px;
+    background-color: #212529;
     border-radius: 6px;
     position: absolute;
     animation-timing-function: linear;
@@ -57,34 +61,70 @@ body {
 
 .item1 {
     animation-delay: calc(30s / 8 * (8 - 1) * -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img[alt="ani"] {
+    height: 40px;
 }
 
 .item2 {
     animation-delay: calc(30s / 8 * (8 - 2) * -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item3 {
     animation-delay: calc(30s / 8 * (8 - 3) * -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item4 {
     animation-delay: calc(30s / 8 * (8 - 4) * -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item5 {
     animation-delay: calc(30s / 8 * (8 - 5) * -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item6 {
     animation-delay: calc(30s / 8 * (8 - 6) * -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item7 {
     animation-delay: calc(30s / 8 * (8 - 7) * -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item8 {
     animation-delay: calc(30s / 8 * (8 - 8) * -1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .background {
