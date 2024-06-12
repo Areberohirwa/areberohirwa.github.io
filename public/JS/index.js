@@ -94,3 +94,54 @@ typewriter.typeString('<strong>WELCOME</strong>')
     .typeString('<strong>COLLABORATION</strong>')
     .pauseFor(2500)
     .start();
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const input = document.querySelector('.review-input');
+    const button = document.querySelector('.add-button');
+    const reviewList = document.querySelector('#review-list');
+
+    input.addEventListener('input', () => {
+        button.disabled = input.value.trim() === '';
+    });
+
+    button.addEventListener('click', () => {
+        if (input.value.trim() !== '') {
+            const li = document.createElement('li');
+            li.className = 'list-group-item bg-black text-white py-1 fw-bold text-lowercase d-flex justify-content-between align-items-center flex-row';
+
+            const divText = document.createElement('div');
+            divText.className = 'align-self-center ms-1 me-auto';
+            divText.textContent = input.value;
+
+            const divIcons = document.createElement('div');
+            divIcons.className = 'align-self-center d-flex justify-content-around align-items-center flex-row';
+
+            const divDelete = document.createElement('div');
+            divDelete.className = 'd-flex justify-content-between align-items-center flex-row align-self-stretch';
+            const inputDelete = document.createElement('input');
+            inputDelete.type = 'checkbox';
+            inputDelete.className = 'btn-check';
+            inputDelete.id = `danger-outlined-${Date.now()}`;
+            const labelDelete = document.createElement('label');
+            labelDelete.className = 'btn btn-outline-danger';
+            labelDelete.htmlFor = inputDelete.id;
+            labelDelete.innerHTML = '<i class="bi bi-trash-fill"></i>';
+            labelDelete.addEventListener('click', () => {
+                li.remove();
+            });
+            divDelete.appendChild(inputDelete);
+            divDelete.appendChild(labelDelete);
+
+            divIcons.appendChild(divDelete);
+
+            li.appendChild(divText);
+            li.appendChild(divIcons);
+
+            reviewList.appendChild(li);
+
+            input.value = '';
+            button.disabled = true;
+        }
+    });
+});

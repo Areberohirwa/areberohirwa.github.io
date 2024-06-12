@@ -106,7 +106,8 @@
             <h2 class="fw-bold align-self-end text-white mb-3">Welcome To My Portfolio</h2>
             <p class="fw-medium text-white lh-lg">
                 As an enthusiastic student at ROC Mondriaan, I am well-acquainted with
-                the wonderful world of programming languages such as JavaScript, HTML, and CSS. With passionate energy,
+                the wonderful world of programming languages such as <code>JavaScript, HTML</code> and <code>CSS</code>
+                . With passionate energy,
                 I strive to be a part of groundbreaking and innovative software projects that elevate user experience to
                 new heights. What's even more exciting is doing this alongside a fantastic team and engaging with both
                 technical and non-technical enthusiasts. Let's get to know each other! Feel free to send me an email at
@@ -156,7 +157,7 @@
             <div class="container-fluid bg-dark rounded d-flex flex-column pb-2">
                 <h2 class="text-white fw-bold align-self-end">Reviews</h2>
                 <hr class="bg-primary p-1 rounded">
-                <ul
+                <ul id="review-list"
                     class="container-fluid list-group align-self-center rounded bg-black p-2 overflow-auto list-group-flush list-group-numbered">
                     <!-- comment list  -->
                     <li
@@ -165,17 +166,6 @@
                             Good job well done!!!!!
                         </div>
                         <div class="align-self-center d-flex justify-content-around align-items-center flex-row">
-                            <div class="d-flex justify-content-between align-items-center flex-row align-self-stretch">
-                                <p class="text-white text-center">0</p>
-                                <i
-                                    class="bi bi-hand-thumbs-up-fill text-warning p-1 rounded bg-dark align-self-start ms-1 animate__animated animate__bounce"></i>
-                            </div>
-                            <div
-                                class="d-flex justify-content-between align-items-center flex-row align-self-stretch mx-2">
-                                <p class="text-white text-center">0</p>
-                                <i
-                                    class="bi bi-suit-heart-fill text-danger p-1 rounded bg-dark align-self-start ms-1 animate__animated animate__heartBeat"></i>
-                            </div>
                             <div class="d-flex justify-content-between align-items-center flex-row align-self-stretch">
                                 <input type="checkbox" class="btn-check" name="options-outlined" id="danger-outlined">
                                 <label class="btn btn-outline-danger" for="danger-outlined"><i
@@ -188,13 +178,13 @@
             </div>
         </div>
         <div
-            class="container-fluid bg-dark rounded col-lg-2 align-self-stretch d-flex flex-column justify-content-between pb-2">
+            class="container-fluid bg-dark rounded col-lg-2 align-self-stretch d-flex flex-column justify-content-between pb-2 add-btn-container">
             <h2 class="text-white fw-bold align-self-end">Post Reviews</h2>
             <p class="text-success fst-italic"> &#60;--!please enter your honest review. Avoid any use of bad languages
-                since it public.--&#62; </p>
+                since it's public.--&#62; </p>
             <form class="d-flex flex-column">
-                <input class="form-control me-2 fw-bold" type="text" placeholder="Add A Review.." aria-label="Text">
-                <button class="btn btn-primary fw-bold mt-2" type="button">Add</button>
+                <input class="form-control me-2 fw-bold review-input" type="text" placeholder="Add A Review.." aria-label="Text">
+                <button class="btn btn-primary fw-bold mt-2 add-button" type="button">Add</button>
             </form>
         </div>
     </div>
@@ -411,3 +401,14 @@
 </body>
 
 </html>
+<!-- <div class="d-flex justify-content-between align-items-center flex-row align-self-stretch">
+        <p class="text-white text-center">0</p>
+        <i
+            class="bi bi-hand-thumbs-up-fill text-warning p-1 rounded bg-dark align-self-start ms-1 animate__animated animate__bounce"></i>
+    </div>
+    <div
+        class="d-flex justify-content-between align-items-center flex-row align-self-stretch mx-2">
+        <p class="text-white text-center">0</p>
+        <i
+            class="bi bi-suit-heart-fill text-danger p-1 rounded bg-dark align-self-start ms-1 animate__animated animate__heartBeat"></i>
+    </div> -->
