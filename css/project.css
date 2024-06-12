@@ -183,7 +183,7 @@
     box-shadow: 0 3px #57cc99;
 }
 
-.sub-pills{
+.sub-pills {
     display: none;
 }
 
@@ -192,10 +192,10 @@
     top: 1px;
 }
 
-.pill-1:hover .sub-pills{
+.pill-1:hover .sub-pills {
 
-        display: flex;
-    }
+    display: flex;
+}
 
 .pills:hover .sub-pills {
     display: flex;
@@ -207,6 +207,11 @@
     top: 5px;
 }
 
+@media screen and (max-width: 700px) {
+    img[alt="..."] {
+        height: 40vh;
+    }
+}
 
 @media screen and (max-width: 1000px) {
     .pills {
