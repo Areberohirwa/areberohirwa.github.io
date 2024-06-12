@@ -2,6 +2,91 @@
     font-family: "Recursive", sans-serif;
 }
 
+body {
+    background-color: #030712;
+}
+
+.wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 15378px;
+    margin-inline: auto;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -200px;
+    }
+}
+
+@keyframes scrollRight {
+    to {
+        right: -200px;
+    }
+}
+
+.itemLeft,
+.itemRight {
+    width: 200px;
+    height: 80px;
+    background-color: #e11d48;
+    border-radius: 6px;
+    position: absolute;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+.itemLeft {
+    left: max(calc(200px * 8), 100%);
+    animation-name: scrollLeft;
+}
+
+.itemRight {
+    right: max(calc(200px * 8), calc(100% + 200px));
+    animation-name: scrollRight;
+}
+
+.item1 {
+    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
 .background {
     background-color: #282a36;
 }
@@ -43,25 +128,7 @@ ul {
     list-style-type: none;
 }
 
-.tag-list {
-    width: 100%;
-    flex-shrink: 0;
-    position: relative;
-    pointer-events: none;
-    background: linear-gradient(90deg, black, red 40%, blue 60%, black);
-    /* position: absolute; */
-    inset: 0;
-}
 
-.loop-slider {
-    .inner {
-        animation-name: loop;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: var(--direction);
-        animation-duration: var(--duration);
-    }
-}
 
 .span-color {
     color: #64748b;
