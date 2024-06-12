@@ -1,3 +1,8 @@
+const input = document.querySelector('.review-input');
+const button = document.querySelector('.add-button');
+const reviewList = document.querySelector('#review-list');
+const shareBtn = document.querySelector(".share-btn");
+const shareInput = document.querySelector(".share-input");
 let app = document.querySelector('#app');
 let nav = document.querySelector(".second-nav");
 window.addEventListener('scroll', function () {
@@ -58,8 +63,6 @@ window.addEventListener('scroll', function () {
 
 // copy link to share
 
-const shareBtn = document.querySelector(".share-btn");
-const shareInput = document.querySelector(".share-input");
 const text = shareInput.value;
 shareBtn.addEventListener("click", () => {
     shareInput.select();
@@ -87,9 +90,6 @@ typewriter.typeString('<strong>WELCOME</strong>')
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const input = document.querySelector('.review-input');
-    const button = document.querySelector('.add-button');
-    const reviewList = document.querySelector('#review-list');
 
     input.addEventListener('input', () => {
         button.disabled = input.value.trim() === '';
@@ -135,3 +135,48 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
+button.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const message = input.value;
+    (async () => {
+        const rawResponse = await fetch('/add-message', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name: message})
+        });
+
+        const content = await rawResponse.json();
+        if (content.cheeseAdded) {
+            alert('Message sent to Database to be checked.');
+        } else {
+            alert('There is something wrong with the adding of the message');
+        }
+    })();
+});
+
+// fetch('/objects').then((res) => res.json()).then(
+//     (objects) => {
+//         for (let i = 0; i < objects.length; i++) {
+//             const htmlCode = createCard(objects[i]);
+//             container.innerHTML += htmlCode;
+//         }
+//     }
+// );
+
+// function createCard(data) {
+//     const htmlCode = `
+//     <div class="card text-center mb-3" style="width: 18rem;">
+//     <div class="card-body">
+//     <h5 class="card-title">${data.icecream}</h5>
+//     <p class="card-text">${data.description}</p>
+//     <a href="#" class="btn btn-primary">${data.price}</a>
+//     </div>
+//         </div>
+//     `;
+//     return htmlCode;
+// }
